@@ -49,4 +49,14 @@ public class AudioMediator : MonoBehaviour
         s.source.Play();
     }
     
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(soundsArray, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound:" + name + " not found!");
+        }
+        s.source.Stop();
+    }
+    
 }
