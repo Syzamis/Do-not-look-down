@@ -268,7 +268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633389140}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.051, y: -0.066, z: 0.0055242823}
+  m_LocalPosition: {x: 0.0585, y: -0.775, z: 0.0055242823}
   m_LocalScale: {x: 1.4285713, y: 1.4285713, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -317,7 +317,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 737021261}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 28b03de49f03ecc43b96ac3d39a0e353, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -413,7 +413,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1070261115}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 6fc03b1955cf94a4ea679b6bd217cec3, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -591,7 +591,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1477688071}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 28b03de49f03ecc43b96ac3d39a0e353, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -635,7 +635,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1581635959}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 6fc03b1955cf94a4ea679b6bd217cec3, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -761,7 +761,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1740629380}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 28b03de49f03ecc43b96ac3d39a0e353, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -841,36 +841,15 @@ GameObject:
   - component: {fileID: 1895358321}
   - component: {fileID: 1895358320}
   - component: {fileID: 1895358319}
-  - component: {fileID: 1895358318}
   - component: {fileID: 1895358322}
-  m_Layer: 0
+  - component: {fileID: 1895358323}
+  m_Layer: 8
   m_Name: New Piskel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1895358318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895358317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11f26c302315b96428ab4cf46489460a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundCheck: {fileID: 633389141}
-  wallCheck: {fileID: 633389141}
-  rigidBody: {fileID: 1895358319}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!50 &1895358319
 Rigidbody2D:
   serializedVersion: 4
@@ -883,7 +862,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -891,7 +870,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &1895358320
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -969,8 +948,8 @@ BoxCollider2D:
   m_GameObject: {fileID: 1895358317}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 28b03de49f03ecc43b96ac3d39a0e353, type: 2}
-  m_IsTrigger: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.06493309, y: 0.11193621}
@@ -986,6 +965,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8006621, y: 1.8181612}
   m_EdgeRadius: 0
+--- !u!114 &1895358323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895358317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554a71e3d41b4864cabb3fbad7556916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidBody: {fileID: 1895358319}
+  groundCheck: {fileID: 633389141}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  raycasterDistance: 1
 --- !u!1 &2099040164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,7 +1025,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2099040164}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 28b03de49f03ecc43b96ac3d39a0e353, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
