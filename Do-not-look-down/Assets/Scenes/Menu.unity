@@ -2631,6 +2631,7 @@ GameObject:
   - component: {fileID: 1296538516}
   - component: {fileID: 1296538515}
   - component: {fileID: 1296538518}
+  - component: {fileID: 1296538519}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -2653,7 +2654,7 @@ RectTransform:
   - {fileID: 1231568958}
   m_Father: {fileID: 179415445}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.98948455}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -214}
@@ -2800,11 +2801,27 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 543f951e8e593c74c99140f88274eef0, type: 2}
   m_Animations:
+  - {fileID: 7400000, guid: f86be54585a51214aa3d3834e8f3c20f, type: 2}
   - {fileID: 7400000, guid: 543f951e8e593c74c99140f88274eef0, type: 2}
+  - {fileID: 7400000, guid: dd314a5003e9b3347a98a6473c49dc8b, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &1296538519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296538513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a991734e82b7747499c8ce83bbfd9db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverAnimation: ButtonHover
+  idleAnimation: Button Anim
 --- !u!1 &1329663756
 GameObject:
   m_ObjectHideFlags: 0
@@ -3305,7 +3322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a991734e82b7747499c8ce83bbfd9db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: Button Hover
+  hoverAnimation: 
+  idleAnimation: 
 --- !u!95 &1358741720
 Animator:
   serializedVersion: 5

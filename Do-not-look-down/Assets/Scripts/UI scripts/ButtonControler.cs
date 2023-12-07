@@ -7,20 +7,31 @@ using UnityEngine.UIElements;
 
 public class ButtonControler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] private string animation;
-    
-    public void Play(string s)
+    [SerializeField] private string hoverAnimation;
+    [SerializeField] private string idleAnimation;
+
+    private void OnEnable()
     {
-        GetComponent<Animation>().Play(s);
+        Play(idleAnimation);
+    }
+
+    public void Play(string anim)
+    {
+        GetComponent<Animation>().CrossFade(anim,0.5f);
+    }
+    
+    public void Stop(string anim)
+    {
+        GetComponent<Animation>().CrossFade(anim,0.5f);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Play(animation);
+        Play(hoverAnimation);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Play("Button Anim");
+        Stop(idleAnimation);
     }
 }
